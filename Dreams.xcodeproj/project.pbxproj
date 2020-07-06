@@ -13,6 +13,8 @@
 		0B49C1B724B2BC5100D2CAE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B49C1B524B2BC5100D2CAE1 /* Main.storyboard */; };
 		0B49C1B924B2BC5400D2CAE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B49C1B824B2BC5400D2CAE1 /* Assets.xcassets */; };
 		0B49C1BC24B2BC5400D2CAE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B49C1BA24B2BC5400D2CAE1 /* LaunchScreen.storyboard */; };
+		0B74AAA824B2E15A00C4B013 /* PwResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B74AAA724B2E15A00C4B013 /* PwResetViewController.swift */; };
+		0B74AAAB24B2E49C00C4B013 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B74AAAA24B2E49C00C4B013 /* SignupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		0B49C1B824B2BC5400D2CAE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B49C1BB24B2BC5400D2CAE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B49C1BD24B2BC5400D2CAE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B74AAA724B2E15A00C4B013 /* PwResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PwResetViewController.swift; sourceTree = "<group>"; };
+		0B74AAAA24B2E49C00C4B013 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		0B49C1AE24B2BC5100D2CAE1 /* Dreams */ = {
 			isa = PBXGroup;
 			children = (
+				0B74AAA924B2E48000C4B013 /* Login */,
 				0B49C1AF24B2BC5100D2CAE1 /* AppDelegate.swift */,
 				0B49C1B124B2BC5100D2CAE1 /* SceneDelegate.swift */,
 				0B49C1B324B2BC5100D2CAE1 /* ViewController.swift */,
@@ -65,6 +70,15 @@
 				0B49C1BD24B2BC5400D2CAE1 /* Info.plist */,
 			);
 			path = Dreams;
+			sourceTree = "<group>";
+		};
+		0B74AAA924B2E48000C4B013 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				0B74AAA724B2E15A00C4B013 /* PwResetViewController.swift */,
+				0B74AAAA24B2E49C00C4B013 /* SignupViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +154,9 @@
 			files = (
 				0B49C1B424B2BC5100D2CAE1 /* ViewController.swift in Sources */,
 				0B49C1B024B2BC5100D2CAE1 /* AppDelegate.swift in Sources */,
+				0B74AAAB24B2E49C00C4B013 /* SignupViewController.swift in Sources */,
 				0B49C1B224B2BC5100D2CAE1 /* SceneDelegate.swift in Sources */,
+				0B74AAA824B2E15A00C4B013 /* PwResetViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
