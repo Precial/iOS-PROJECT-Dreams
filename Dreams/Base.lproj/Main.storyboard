@@ -182,10 +182,26 @@
             </objects>
             <point key="canvasLocation" x="2661.5999999999999" y="134.48275862068965"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="Tss-xU-Sjs">
+            <objects>
+                <viewController id="2YX-WB-J0h" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Np5-cE-8YZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="2yW-dl-hJ2"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="riG-ae-fRq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eFi-Ql-KGP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2641" y="876"/>
+        </scene>
         <!--Signup View Controller-->
         <scene sceneID="X3i-YL-370">
             <objects>
-                <viewController id="tpo-PM-92y" customClass="SignupViewController" customModule="Dreams" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tpo-PM-92y" customClass="SignupViewController" customModule="Dreams" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hdf-B8-Ux1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -209,6 +225,9 @@
                                 <state key="normal" title="내용보기">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="agreeView:" destination="tpo-PM-92y" eventType="touchUpInside" id="oYw-e4-gsN"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="회원가입" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hiv-TK-6T8">
                                 <rect key="frame" x="121" y="57" width="129" height="30"/>
@@ -224,7 +243,7 @@
                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="cancleBtn:" destination="tpo-PM-92y" eventType="touchUpInside" id="Pio-KU-5gI"/>
+                                    <action selector="cancleBtn:" destination="tpo-PM-92y" eventType="touchUpInside" id="Qv2-zw-QhS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZv-Ow-NwD">
@@ -234,6 +253,9 @@
                                 <state key="normal" title="내용보기">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="agreeView2:" destination="tpo-PM-92y" eventType="touchUpInside" id="wK3-cE-lyh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KsS-D3-fcY">
                                 <rect key="frame" x="0.0" y="820" width="414" height="76"/>
@@ -267,6 +289,9 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
                                 </state>
                                 <state key="selected" image="checkmark.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="agreeBtn1:" destination="tpo-PM-92y" eventType="touchUpInside" id="Akg-Lq-g7J"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQI-Mm-75i">
                                 <rect key="frame" x="12" y="608" width="35" height="35"/>
@@ -276,6 +301,9 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
                                 </state>
                                 <state key="selected" image="checkmark.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="agreeBtn2:" destination="tpo-PM-92y" eventType="touchUpInside" id="edw-Ar-O8v"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aOB-RN-BfG" customClass="HoshiTextField" customModule="TextFieldEffects">
                                 <rect key="frame" x="48" y="319" width="275" height="40"/>
@@ -284,7 +312,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
-                                        <color key="value" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                         <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -298,7 +326,7 @@
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
-                                        <color key="value" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                         <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -314,6 +342,9 @@
                                 <state key="normal" title="회원가입 완료">
                                     <color key="titleColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="createBtn:" destination="tpo-PM-92y" eventType="touchUpInside" id="0dH-S1-016"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="비밀번호 재입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HyY-vc-veM" customClass="HoshiTextField" customModule="TextFieldEffects">
                                 <rect key="frame" x="48" y="367" width="275" height="40"/>
@@ -322,21 +353,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
-                                        <color key="value" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="이메일" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4hT-xn-f9X" customClass="HoshiTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="50" y="268" width="275" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
-                                        <color key="value" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                         <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -347,15 +364,41 @@
                                 <rect key="frame" x="115" y="114" width="144" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="이메일" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TbG-ar-aPz" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="48" y="271" width="275" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                        <color key="value" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ko-5l-754">
                                 <rect key="frame" x="121" y="114" width="138" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="addImage:" destination="tpo-PM-92y" eventType="touchUpInside" id="Pnv-UX-Eho"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="87z-l3-T8t"/>
                     </view>
                     <navigationItem key="navigationItem" id="Ex6-MU-2YE"/>
+                    <connections>
+                        <outlet property="agreeBtn1" destination="a7G-pa-tsX" id="irB-FG-Vt3"/>
+                        <outlet property="agreeBtn2" destination="MQI-Mm-75i" id="hKf-E3-fQ9"/>
+                        <outlet property="email" destination="TbG-ar-aPz" id="lxP-Av-k8f"/>
+                        <outlet property="imageView" destination="4dt-3M-nOb" id="a4S-O3-nA0"/>
+                        <outlet property="name" destination="oPf-hJ-w9d" id="HaJ-yt-r4h"/>
+                        <outlet property="password" destination="aOB-RN-BfG" id="2gz-xK-SQU"/>
+                        <outlet property="passwordRe" destination="HyY-vc-veM" id="GCR-4l-vay"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uJg-9f-5Zs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -453,16 +496,47 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="udI-14-Krt" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ys4-Lq-eI4">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="73p-Rj-DFe" kind="relationship" relationship="viewControllers" id="rHP-A6-a7a"/>
+                        <segue destination="2YX-WB-J0h" kind="relationship" relationship="viewControllers" id="Oo9-1d-HAI"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6wO-9B-VBi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1719.2" y="134.48275862068965"/>
+        </scene>
+        <!--Agree View Controller-->
+        <scene sceneID="v5h-fY-FnG">
+            <objects>
+                <viewController storyboardIdentifier="showAgree" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y7J-zb-wKV" customClass="AgreeViewController" customModule="Dreams" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P7a-5H-Qg0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ULr-J8-vn4">
+                                <rect key="frame" x="16" y="91" width="343" height="687"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="ZbX-1u-qF7"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wan-vl-AZO"/>
+                    <connections>
+                        <outlet property="agreeTextView" destination="ULr-J8-vn4" id="8hp-2Z-2GN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3JK-zp-qlS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7" y="1660"/>
         </scene>
     </scenes>
     <resources>
@@ -471,7 +545,7 @@
         <image name="facebook" width="325" height="325"/>
         <image name="google" width="500" height="500"/>
         <image name="kakao" width="512" height="512"/>
-        <image name="profile" width="128" height="128"/>
+        <image name="profile" width="512" height="512"/>
         <image name="메인_포스터" width="800" height="1146"/>
     </resources>
 </document>
