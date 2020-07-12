@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import GoogleSignIn
+import FBSDKLoginKit
 
 class ViewController: UIViewController {
 
@@ -84,6 +85,48 @@ class ViewController: UIViewController {
     @IBAction func googleLoginBtn(_ sender: Any) {
            GIDSignIn.sharedInstance().signIn() // 구글 로그인 불러오기
     }
+    
+    @IBAction func facebookLoginBtn(_ sender: Any) {
+        facebookLogin()
+    }
+    
+    
+        func facebookLogin(){
+            let fbLoginManager: LoginManager = LoginManager()
+            fbLoginManager.logIn(permissions: ["email"], from: self){
+                (result,error) -> Void in
+                
+                if error != nil {
+                    print("Process error")
+                }
+                
+                else if result?.isCancelled == true {
+                    print("Cancelled")
+                }
+                
+                else {
+                    print("Logged in")
+                    self.getFBUserData()
+                }
+                
+            }
+        }
+        
+        func getFBUserData(){
+            if((AccessToken.current) != nil) {
+                GraphRequest(graphPath:"me",parameters:["fields":"id,name,first_name,last_name,picture.type(large),email"]).start(completionHandler:{ (connection,result,error) -> Void in
+                    if(error == nil){
+                  
+                }
+            })
+        }
+        
+            let credential = FacebookAuthProvider.credential(withAccessToken: AccessToken.current!.tokenString)
+            Auth.auth().signIn(with:credential,completion:{(user,error) in })
+            LoginManager().logOut();
+        
+    }
+    
     
     
     @IBAction func loginBtn(_ sender: Any) {

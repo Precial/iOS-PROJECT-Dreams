@@ -77,6 +77,9 @@
                                 <rect key="frame" x="158" y="698" width="55" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="facebook"/>
+                                <connections>
+                                    <action selector="facebookLoginBtn:" destination="yrP-Uo-L8f" eventType="touchUpInside" id="l9o-xi-R0X"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2py-Gr-33R">
                                 <rect key="frame" x="65" y="508" width="231" height="34"/>

@@ -5,6 +5,22 @@ PODS:
   - AppAuth/Core (1.3.0)
   - AppAuth/ExternalUserAgent (1.3.0)
   - BEMCheckBox (1.4.1)
+  - FBSDKCoreKit (5.15.1):
+    - FBSDKCoreKit/Basics (= 5.15.1)
+    - FBSDKCoreKit/Core (= 5.15.1)
+  - FBSDKCoreKit/Basics (5.15.1)
+  - FBSDKCoreKit/Core (5.15.1):
+    - FBSDKCoreKit/Basics
+  - FBSDKLoginKit (5.15.1):
+    - FBSDKLoginKit/Login (= 5.15.1)
+  - FBSDKLoginKit/Login (5.15.1):
+    - FBSDKCoreKit (~> 5.0)
+  - FBSDKPlacesKit (5.15.0):
+    - FBSDKCoreKit (~> 5.0)
+  - FBSDKShareKit (5.15.1):
+    - FBSDKShareKit/Share (= 5.15.1)
+  - FBSDKShareKit/Share (5.15.1):
+    - FBSDKCoreKit (~> 5.0)
   - Firebase/Analytics (6.21.0):
     - Firebase/Core
   - Firebase/Auth (6.21.0):
@@ -134,6 +150,10 @@ PODS:
 
 DEPENDENCIES:
   - BEMCheckBox
+  - FBSDKCoreKit
+  - FBSDKLoginKit
+  - FBSDKPlacesKit
+  - FBSDKShareKit
   - Firebase/Analytics
   - Firebase/Auth
   - Firebase/Core
@@ -150,6 +170,10 @@ SPEC REPOS:
   trunk:
     - AppAuth
     - BEMCheckBox
+    - FBSDKCoreKit
+    - FBSDKLoginKit
+    - FBSDKPlacesKit
+    - FBSDKShareKit
     - Firebase
     - FirebaseABTesting
     - FirebaseAnalytics
@@ -182,6 +206,10 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AppAuth: 73574f3013a1e65b9601a3ddc8b3158cce68c09d
   BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
+  FBSDKCoreKit: 1d5acf7c9d7a2f92bb1a242dc60cae5b7adb91df
+  FBSDKLoginKit: f1ea8026a58b52d30c9f2e6a58ca7d813619fb83
+  FBSDKPlacesKit: 26d4033cb8cc8640f1e0eadb3635e7dd29c4d073
+  FBSDKShareKit: 259737eab3cc807087374553abdf588b3096ba55
   Firebase: f378c80340dd41c0ad0914af740c021eb282a04b
   FirebaseABTesting: 821a3a3e4a145987e80fee3657c4de1cb9adf693
   FirebaseAnalytics: a1a0b3327ceb5cd5b4bacffdb293f6c909aa087d
@@ -211,6 +239,6 @@ SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
 
-PODFILE CHECKSUM: b41fb37aa94b86ca46cf8d6a388e6e1b204ae36e
+PODFILE CHECKSUM: 54803e5056ff378edda3f6eb8fa9741cfe820a8b
 
 COCOAPODS: 1.9.1

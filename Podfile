@@ -21,5 +21,9 @@ pod 'BEMCheckBox'
 
 pod 'GoogleSignIn'
 
+pod 'FBSDKCoreKit'
+pod 'FBSDKLoginKit'
+pod 'FBSDKShareKit'
+pod 'FBSDKPlacesKit'
 
 end
