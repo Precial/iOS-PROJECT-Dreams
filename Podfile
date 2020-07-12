@@ -19,5 +19,7 @@ pod 'ObjectMapper', '~>3.1'
 pod 'Kingfisher', '~> 5.0'
 pod 'BEMCheckBox'
 
+pod 'GoogleSignIn'
+
 
 end

@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import GoogleSignIn
 
 class ViewController: UIViewController {
 
@@ -21,7 +22,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    
+        /* 구글로그인 연동 컨트롤러 연결을해당 현재 컨트롤로 값으로 부여 */
+        GIDSignIn.sharedInstance()?.presentingViewController = self
+            
         
         userEMAIL.attributedPlaceholder = NSAttributedString(string: "이메일을 입력하세요.", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white])
         userPW.attributedPlaceholder = NSAttributedString(string: "비밀번호를 입력하세요.", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white])
@@ -78,9 +81,16 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func googleLoginBtn(_ sender: Any) {
+           GIDSignIn.sharedInstance().signIn() // 구글 로그인 불러오기
+    }
+    
+    
     @IBAction func loginBtn(_ sender: Any) {
          loginEvent()
     }
+    
+    
     
     func loginEvent(){
        /* 테스트 모드 */

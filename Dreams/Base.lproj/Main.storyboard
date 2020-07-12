@@ -126,6 +126,9 @@
                                 <rect key="frame" x="256" y="698" width="55" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="google"/>
+                                <connections>
+                                    <action selector="googleLoginBtn:" destination="yrP-Uo-L8f" eventType="touchUpInside" id="XPn-1P-TNY"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="아이디" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qin-Iq-frV">
                                 <rect key="frame" x="62" y="461" width="246" height="34"/>
