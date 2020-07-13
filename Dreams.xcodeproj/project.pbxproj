@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B40CC0D24BC540B00356A69 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B40CC0C24BC540B00356A69 /* IntroViewController.swift */; };
+		0B40CC1024BC5ADA00356A69 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B40CC0F24BC5ADA00356A69 /* TabViewController.swift */; };
 		0B49C1B024B2BC5100D2CAE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B49C1AF24B2BC5100D2CAE1 /* AppDelegate.swift */; };
 		0B49C1B224B2BC5100D2CAE1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B49C1B124B2BC5100D2CAE1 /* SceneDelegate.swift */; };
 		0B49C1B424B2BC5100D2CAE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B49C1B324B2BC5100D2CAE1 /* ViewController.swift */; };
@@ -22,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		08F7D48ED4D1D97AF232219C /* Pods-Dreams.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dreams.debug.xcconfig"; path = "Target Support Files/Pods-Dreams/Pods-Dreams.debug.xcconfig"; sourceTree = "<group>"; };
+		0B40CC0C24BC540B00356A69 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		0B40CC0F24BC5ADA00356A69 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		0B49C1AC24B2BC5100D2CAE1 /* Dreams.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dreams.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B49C1AF24B2BC5100D2CAE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B49C1B124B2BC5100D2CAE1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +54,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B40CC0E24BC55F400356A69 /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				0B40CC0C24BC540B00356A69 /* IntroViewController.swift */,
+				0B40CC0F24BC5ADA00356A69 /* TabViewController.swift */,
+			);
+			path = Intro;
+			sourceTree = "<group>";
+		};
 		0B49C1A324B2BC5100D2CAE1 = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +84,7 @@
 		0B49C1AE24B2BC5100D2CAE1 /* Dreams */ = {
 			isa = PBXGroup;
 			children = (
+				0B40CC0E24BC55F400356A69 /* Intro */,
 				0B74AAA924B2E48000C4B013 /* Login */,
 				0B49C1AF24B2BC5100D2CAE1 /* AppDelegate.swift */,
 				0B49C1B124B2BC5100D2CAE1 /* SceneDelegate.swift */,
@@ -245,8 +259,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B40CC1024BC5ADA00356A69 /* TabViewController.swift in Sources */,
 				0B49C1B424B2BC5100D2CAE1 /* ViewController.swift in Sources */,
 				0B49C1B024B2BC5100D2CAE1 /* AppDelegate.swift in Sources */,
+				0B40CC0D24BC540B00356A69 /* IntroViewController.swift in Sources */,
 				0B74AAAB24B2E49C00C4B013 /* SignupViewController.swift in Sources */,
 				0B49C1B224B2BC5100D2CAE1 /* SceneDelegate.swift in Sources */,
 				0B74AAA824B2E15A00C4B013 /* PwResetViewController.swift in Sources */,

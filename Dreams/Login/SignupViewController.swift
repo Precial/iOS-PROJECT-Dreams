@@ -192,7 +192,8 @@ class SignupViewController: UIViewController {
                                alert.addAction(UIAlertAction(title: "확인", style: .default){
                                UIAlertAction in
                                   if self.createTrue {
-                                    self.dismiss(animated: true, completion: nil)
+                                   // self.dismiss(animated: true, completion: nil)
+                                     self.performSegue(withIdentifier: "intro", sender: self)
                                 }
                          })
                         present(alert, animated: true, completion: nil)

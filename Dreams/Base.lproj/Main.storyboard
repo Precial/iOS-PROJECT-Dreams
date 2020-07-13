@@ -84,8 +84,9 @@
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2py-Gr-33R">
                                 <rect key="frame" x="65" y="508" width="231" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbt-a4-pBr">
                                 <rect key="frame" x="48" y="564" width="52" height="30"/>
@@ -156,17 +157,17 @@
                         <outlet property="bgPW" destination="uKh-IJ-SOS" id="3sI-vy-ayV"/>
                         <outlet property="userEMAIL" destination="qin-Iq-frV" id="cZd-Zk-CBP"/>
                         <outlet property="userPW" destination="2py-Gr-33R" id="blJ-CZ-pQe"/>
-                        <segue destination="udI-14-Krt" kind="presentation" identifier="loginNext" modalPresentationStyle="fullScreen" id="DWT-CS-42m"/>
+                        <segue destination="udI-14-Krt" kind="presentation" identifier="login" modalPresentationStyle="fullScreen" id="2gS-HW-T1i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dBo-L0-i8Q" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="668" y="138.91625615763547"/>
+            <point key="canvasLocation" x="-97" y="134"/>
         </scene>
         <!--Item-->
         <scene sceneID="Wpd-Ga-cOY">
             <objects>
-                <viewController id="73p-Rj-DFe" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TabViewController" id="73p-Rj-DFe" customClass="TabViewController" customModule="Dreams" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rSt-3Z-skW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -404,6 +405,7 @@
                         <outlet property="name" destination="oPf-hJ-w9d" id="HaJ-yt-r4h"/>
                         <outlet property="password" destination="aOB-RN-BfG" id="2gz-xK-SQU"/>
                         <outlet property="passwordRe" destination="HyY-vc-veM" id="GCR-4l-vay"/>
+                        <segue destination="WJ8-F6-oaM" kind="presentation" identifier="intro" modalPresentationStyle="fullScreen" id="lRU-qN-U7v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uJg-9f-5Zs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -496,6 +498,57 @@
             </objects>
             <point key="canvasLocation" x="668" y="920.68965517241384"/>
         </scene>
+        <!--Intro View Controller-->
+        <scene sceneID="2lf-ng-dhK">
+            <objects>
+                <viewController id="WJ8-F6-oaM" customClass="IntroViewController" customModule="Dreams" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gq5-d3-UtM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dYt-ma-mhv">
+                                <rect key="frame" x="32" y="108" width="313" height="418"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gR9-Ps-Bey">
+                                <rect key="frame" x="0.0" y="728" width="181" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <state key="normal" title="이전">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="agoBtn:" destination="WJ8-F6-oaM" eventType="touchUpInside" id="vXS-UC-G8c"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTX-CD-XnJ">
+                                <rect key="frame" x="178" y="728" width="197" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="19"/>
+                                <state key="normal" title="다음">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextBtn:" destination="WJ8-F6-oaM" eventType="touchUpInside" id="Iba-Nx-u36"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="5ur-F9-iIp"/>
+                    </view>
+                    <connections>
+                        <outlet property="agoBtn" destination="gR9-Ps-Bey" id="stM-LU-Tzs"/>
+                        <outlet property="imageView" destination="dYt-ma-mhv" id="0BN-8I-3Cz"/>
+                        <outlet property="nextBtn" destination="eTX-CD-XnJ" id="Q29-2p-jxS"/>
+                        <segue destination="udI-14-Krt" kind="presentation" identifier="introNext" modalPresentationStyle="fullScreen" id="JK3-iG-6uW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YW5-4G-aEY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1514" y="1660"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ttg-bB-FrE">
             <objects>
@@ -513,7 +566,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6wO-9B-VBi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1719.2" y="134.48275862068965"/>
+            <point key="canvasLocation" x="830" y="134"/>
         </scene>
         <!--Agree View Controller-->
         <scene sceneID="v5h-fY-FnG">
@@ -545,6 +598,9 @@
             <point key="canvasLocation" x="-7" y="1660"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="2gS-HW-T1i"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="circle" catalog="system" width="128" height="121"/>

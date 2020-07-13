@@ -46,7 +46,7 @@ class ViewController: UIViewController {
          */
         Auth.auth().addStateDidChangeListener { (auth, user) in
         if let user = user {
-        self.performSegue(withIdentifier: "loginNext", sender: self) // 현재 사용자가 로그인 된 상태가 맞다면 다음 화면으로 이동
+        self.performSegue(withIdentifier: "login", sender: self) // 현재 사용자가 로그인 된 상태가 맞다면 다음 화면으로 이동
                 }
         }
         
