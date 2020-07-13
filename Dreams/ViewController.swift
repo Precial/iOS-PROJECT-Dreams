@@ -29,6 +29,7 @@ class ViewController: UIViewController {
         
         userEMAIL.attributedPlaceholder = NSAttributedString(string: "이메일을 입력하세요.", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white])
         userPW.attributedPlaceholder = NSAttributedString(string: "비밀번호를 입력하세요.", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white])
+  
         
         self.bgEMAIL.layer.borderWidth = 1.0
         self.bgEMAIL.layer.borderColor = UIColor.white.cgColor
