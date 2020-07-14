@@ -17,9 +17,11 @@ import FBSDKLoginKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
+    
+
 
     
-    
+    // --
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -37,13 +39,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         // 페이스북 로그인 연동 설정
         ApplicationDelegate.shared.application( application, didFinishLaunchingWithOptions: launchOptions )
         
+         
+
+
+   
+        
+        
         //sleep(3) // 앱 시작시 스플래시 화면 길게 보여주기 위해 sleep 적용.
         return true
     }
     
 
-  
-        
+    
+
+
+
+   
     
     
     @available(iOS 9.0, *)
@@ -53,7 +64,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
                 let facebook = ApplicationDelegate.shared.application( application, open: url, sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String, annotation: options[UIApplication.OpenURLOptionsKey.annotation] )
         
-        
+        if KOSession.isKakaoAccountLoginCallback(url.absoluteURL) {
+            return KOSession.handleOpen(url)
+          }
+     
         
       return google || facebook
     }
@@ -64,9 +78,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
        let facebook =  ApplicationDelegate.shared.application( application, open: url, sourceApplication: sourceApplication, annotation: annotation)
          
+     if KOSession.isKakaoAccountLoginCallback(url.absoluteURL) {
+       return KOSession.handleOpen(url)
+     }
         
     return google || facebook
     }
+    
+    
+    
+
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
       // ...

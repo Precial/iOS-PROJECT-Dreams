@@ -19,6 +19,7 @@
 		0B5B60B424B4416D001DDCA2 /* AgreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5B60B324B4416D001DDCA2 /* AgreeViewController.swift */; };
 		0B74AAA824B2E15A00C4B013 /* PwResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B74AAA724B2E15A00C4B013 /* PwResetViewController.swift */; };
 		0B74AAAB24B2E49C00C4B013 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B74AAAA24B2E49C00C4B013 /* SignupViewController.swift */; };
+		0BE4FFDE24BD9F8200D494C5 /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE4FFDD24BD9F8200D494C5 /* KakaoOpenSDK.framework */; };
 		78D4FA55BBF36E2F58E5DB10 /* Pods_Dreams.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61CC4D371579F6FEE0D3766A /* Pods_Dreams.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,8 @@
 		0B5B60B324B4416D001DDCA2 /* AgreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreeViewController.swift; sourceTree = "<group>"; };
 		0B74AAA724B2E15A00C4B013 /* PwResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PwResetViewController.swift; sourceTree = "<group>"; };
 		0B74AAAA24B2E49C00C4B013 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		0BE4FFDD24BD9F8200D494C5 /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoOpenSDK.framework; sourceTree = "<group>"; };
+		0BE4FFDF24BDA09900D494C5 /* Dreams-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dreams-Bridging-Header.h"; sourceTree = "<group>"; };
 		61742FECBF0260A50556A7A9 /* Pods-Dreams.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dreams.release.xcconfig"; path = "Target Support Files/Pods-Dreams/Pods-Dreams.release.xcconfig"; sourceTree = "<group>"; };
 		61CC4D371579F6FEE0D3766A /* Pods_Dreams.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dreams.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -48,6 +51,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78D4FA55BBF36E2F58E5DB10 /* Pods_Dreams.framework in Frameworks */,
+				0BE4FFDE24BD9F8200D494C5 /* KakaoOpenSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +98,7 @@
 				0B49C1BA24B2BC5400D2CAE1 /* LaunchScreen.storyboard */,
 				0B5B60B124B431DC001DDCA2 /* GoogleService-Info.plist */,
 				0B49C1BD24B2BC5400D2CAE1 /* Info.plist */,
+				0BE4FFDF24BDA09900D494C5 /* Dreams-Bridging-Header.h */,
 			);
 			path = Dreams;
 			sourceTree = "<group>";
@@ -120,6 +125,7 @@
 		E81A771BF500580DA56C4062 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0BE4FFDD24BD9F8200D494C5 /* KakaoOpenSDK.framework */,
 				61CC4D371579F6FEE0D3766A /* Pods_Dreams.framework */,
 			);
 			name = Frameworks;
@@ -160,6 +166,7 @@
 				TargetAttributes = {
 					0B49C1AB24B2BC5100D2CAE1 = {
 						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1150;
 					};
 				};
 			};
@@ -411,8 +418,13 @@
 			baseConfigurationReference = 08F7D48ED4D1D97AF232219C /* Pods-Dreams.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2HU44QQL5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Dreams/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -420,6 +432,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sg.Dreams;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Dreams/Dreams-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -430,8 +444,13 @@
 			baseConfigurationReference = 61742FECBF0260A50556A7A9 /* Pods-Dreams.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2HU44QQL5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Dreams/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -439,6 +458,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sg.Dreams;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Dreams/Dreams-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

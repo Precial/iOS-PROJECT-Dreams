@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import GoogleSignIn
 import FBSDKLoginKit
+import KakaoOpenSDK
 
 class ViewController: UIViewController {
 
@@ -86,6 +87,42 @@ class ViewController: UIViewController {
     @IBAction func googleLoginBtn(_ sender: Any) {
            GIDSignIn.sharedInstance().signIn() // 구글 로그인 불러오기
     }
+    
+    
+    @IBAction func kakaoLoginBtn(_ sender: Any) {
+        //이전 카카오톡 세션 열려있으면 닫기
+        guard let session = KOSession.shared() else {
+            return
+        }
+        if session.isOpen() {
+            session.close()
+        }
+        session.open(completionHandler: { (error) -> Void in
+            if error == nil {
+                if session.isOpen() {
+                    //accessToken
+                    print(session.token?.accessToken)
+                } else {
+                    print("Login failed")
+                }
+            } else {
+                print("Login error : \(String(describing: error))")
+            }
+            if !session.isOpen() {
+                if let error = error as NSError? {
+                    switch error.code {
+                    case Int(KOErrorCancelled.rawValue):
+                        break
+                    default:
+                        //간편 로그인 취소
+                        print("error : \(error.description)")
+                    }
+                }
+            }
+        })
+    }
+    
+    
     
     @IBAction func facebookLoginBtn(_ sender: Any) {
         facebookLogin()

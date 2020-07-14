@@ -72,6 +72,9 @@
                                 <rect key="frame" x="56" y="699" width="55" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="kakao"/>
+                                <connections>
+                                    <action selector="kakaoLoginBtn:" destination="yrP-Uo-L8f" eventType="touchUpInside" id="6wb-Yd-5zY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iNM-cN-59O">
                                 <rect key="frame" x="158" y="698" width="55" height="55"/>
