@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>KAKAO_APP_KEY</key>
+	<string>8ddd1958366e084809e7a69817003bf6</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -49,21 +51,13 @@
 	<string>Dreams</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
-		<string>fbapi</string>
-		<string>fbapi20130214</string>
-		<string>fbapi20130410</string>
-		<string>fbapi20130702</string>
-		<string>fbapi20131010</string>
-		<string>fbapi20131219</string>
-		<string>fbapi20140410</string>
-		<string>fbapi20140116</string>
-		<string>fbapi20150313</string>
-		<string>fbapi20150629</string>
-		<string>fbapi20160328</string>
-		<string>fbauth</string>
-		<string>fb-messenger-share-api</string>
-		<string>fbauth2</string>
-		<string>fbshareextension</string>
+		<string>kakao8ddd1958366e084809e7a69817003bf6</string>
+		<string>kakaokompassauth</string>
+		<string>storykompassauth</string>
+		<string>kakaolink</string>
+		<string>kakaotalk-4.5.0</string>
+		<string>kakaostory-2.9.0</string>
+		<string>storylink</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
@@ -107,31 +101,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-    
-    
-    <key>LSApplicationQueriesSchemes</key>
-
-    <array>
-
-        <string>kakao8ddd1958366e084809e7a69817003bf6</string>
-
-        <string>kakaokompassauth</string>
-
-        <string>storykompassauth</string>
-
-        <string>kakaolink</string>
-
-        <string>kakaotalk-4.5.0</string>
-
-        <string>kakaostory-2.9.0</string>
-
-        <string>storylink</string>
-
-    </array>
-
-
-
-   
-    
 </dict>
 </plist>
